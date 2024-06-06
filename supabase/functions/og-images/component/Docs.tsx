@@ -30,16 +30,14 @@ const Docs = (props: Props) => {
         height: '100%',
         width: '100%',
         display: 'flex',
+        padding: 64,
         flexDirection: 'column',
         color: 'white',
-        backgroundColor: '#1c1c1c',
+        backgroundColor: '#1C1C1C',
         fontFamily: 'Circular',
-        backgroundImage:
-          'url(https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/og-images/gradient.svg)',
-        backgroundRepeat: 'no-repeat',
       }}
     >
-      <div tw="flex flex-row items-center justify-center absolute top-[60px] left-[64px]">
+      <div tw="w-full flex flex-row items-center relative">
         {icon && (
           <img
             src={`https://raw.githubusercontent.com/supabase/supabase/master/apps/docs/public/img/icons/${icon}-icon.svg`}
@@ -60,19 +58,19 @@ const Docs = (props: Props) => {
             <span tw="text-[36px] text-[#ededed] ml-[16px]">{typeName}</span>
           </>
         )}
-      </div>
-      <div tw="flex flex-col">
-        <div tw="flex flex-col absolute left-[64px] top-[154px] w-[1072px]">
-          <h1 tw="my-0 mb-2 text-[60px]">{!title ? 'Supabase' : title}</h1>
-          <p tw="my-0 mt-2 text-[40px] text-[#f2fff9] opacity-50">{description}</p>
-        </div>
-        <div tw="flex flex-row items-center justify-center absolute left-[64px] top-[500px]">
+        <div tw="flex flex-row items-center justify-center absolute right-0">
           <img
             src="https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.png"
             width={180}
             height={34}
           />
           <span tw="text-lg font-normal text-[#3ecf8e] ml-2">DOCS</span>
+        </div>
+      </div>
+      <div tw="flex flex-col flex-grow relative">
+        <div tw="flex flex-col w-[1072px] mt-10">
+          <h1 tw="my-0 mb-2 text-[60px]">{!title ? 'Supabase' : title}</h1>
+          <p tw="my-0 mt-2 text-[40px] text-[#f2fff9] opacity-50">{description}</p>
         </div>
       </div>
     </div>
